@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Kiran Academy | IT Training & Placement</title>
+
+  <meta name="description"
+        content="The Kiran Academy - IT training, courses, mock tests, placement preparation and career programs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #ff6b00;
+      --primary-dark: #e85d00;
+      --secondary: #0d47a1;
+      --dark: #111827;
+      --text: #374151;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --radius: 16px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title .tag {
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 10px 0;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 107, 0, .25);
+    }
+
+    .btn-outline {
+      border: 1px solid #d1d5db;
+      color: var(--dark);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .topbar {
+      background: var(--dark);
+      color: white;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .topbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar-right {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--primary), #ff9d4d);
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .logo-text strong {
+      display: block;
+      color: var(--dark);
+      font-size: 17px;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,107,0,.18), transparent 28%),
+        linear-gradient(135deg, #071a38, #0d47a1);
+      color: white;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 80px solid rgba(255,255,255,.04);
+      border-radius: 50%;
+      right: -150px;
+      top: -150px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 8px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #ff8a38;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      max-width: 620px;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .hero .btn-outline {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,.4);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(12px);
+      padding: 25px;
+      border-radius: 24px;
+      position: relative;
+    }
+
+    .hero-card h3 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-course {
+      background: white;
+      color: var(--dark);
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-course strong {
+      font-size: 14px;
+    }
+
+    .hero-course span {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       STATS
+    ========================== */
+
+    .stats {
+      margin-top: -40px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: white;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 30px 15px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border: 0;
+    }
+
+    .stat h3 {
+      color: var(--primary);
+      font-size: 31px;
+    }
+
+    .stat p {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* =========================
+       COURSES
+    ========================== */
+
+    .courses {
+      background: #f8fafc;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .course-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 23px;
+      border-radius: var(--radius);
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+      border-color: #ffd1b0;
+    }
+
+    .course-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #fff1e8;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .course-card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .course-card p {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .course-link {
+      color: var(--primary);
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       WHY US
+    ========================== */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-image {
+      min-height: 450px;
+      background:
+        linear-gradient(rgba(13,71,161,.85), rgba(255,107,0,.75)),
+        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80")
+        center/cover;
+      border-radius: 25px;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      color: white;
+    }
+
+    .why-image-box {
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .why-image-box h3 {
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .why-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 15px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .check {
+      min-width: 40px;
+      height: 40px;
+      background: #e8f7ed;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .why-item h4 {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .why-item p {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* =========================
+       PROGRAMS
+    ========================== */
+
+    .programs {
+      background: #f8fafc;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .program-card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .program-card.featured {
+      border: 2px solid var(--primary);
+    }
+
+    .program-card .popular {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      font-size: 11px;
+      padding: 5px 9px;
+      background: #fff1e8;
+      color: var(--primary);
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .program-card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .program-card p {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .program-card li {
+      font-size: 13px;
+      margin: 10px 0;
+      color: #4b5563;
+    }
+
+    .program-card li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    /* =========================
+       PLACEMENTS
+    ========================== */
+
+    .placement-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .placement-box {
+      background: linear-gradient(135deg, #ff6b00, #ff9a50);
+      color: white;
+      border-radius: 25px;
+      padding: 40px;
+    }
+
+    .placement-box h2 {
+      color: white;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .placement-box p {
+      color: #fff3e9;
+    }
+
+    .placement-points {
+      margin-top: 25px;
+    }
+
+    .placement-points div {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+
+    .companies {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .company {
+      border: 1px solid var(--border);
+      min-height: 80px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: white;
+      font-weight: 800;
+      color: #374151;
+    }
+
+    /* =========================
+       MOCK TEST
+    ========================== */
+
+    .mock-section {
+      background:
+        linear-gradient(135deg, #071a38, #0d47a1);
+      color: white;
+    }
+
+    .mock-section h2 {
+      color: white;
+    }
+
+    .mock-section .section-title p {
+      color: #cbd5e1;
+    }
+
+    .mock-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .mock-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 28px;
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .mock-card h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .mock-card p {
+      color: #dbeafe;
+      font-size: 14px;
+    }
+
+    .timer {
+      font-size: 40px;
+      font-weight: 800;
+      color: #ff9b5c;
+      margin: 15px 0;
+    }
+
+    /* =========================
+       SCHEDULE
+    ========================== */
+
+    .schedule-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      min-width: 700px;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    th {
+      background: #fff7f1;
+      color: var(--dark);
+    }
+
+    .status {
+      background: #e8f7ed;
+      color: var(--green);
+      padding: 5px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       CENTRES
+    ========================== */
+
+    .centres {
+      background: #f8fafc;
+    }
+
+    .centre-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .centre-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: .3s;
+    }
+
+    .centre-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .centre-image {
+      height: 170px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .pune {
+      background-image:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .nagpur {
+      background-image:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .mumbai {
+      background-image:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .centre-info {
+      padding: 20px;
+    }
+
+    .centre-info h3 {
+      margin-bottom: 6px;
+    }
+
+    .centre-info p {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: #071a38;
+      color: white;
+      border-radius: 20px;
+      padding: 35px;
+    }
+
+    .contact-card h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 13px;
+      margin: 20px 0;
+      color: #dbeafe;
+    }
+
+    .contact-form {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      outline: none;
+      font: inherit;
+      transition: .2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255,107,0,.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #07101f;
+      color: #9ca3af;
+      padding: 50px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3, footer h4 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p, footer li {
+      font-size: 13px;
+      margin: 8px 0;
+    }
+
+    footer a:hover {
+      color: #ff8a38;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 35px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* =========================
+       LOGIN MODAL
+    ========================== */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: white;
+      width: min(450px, 100%);
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      animation: modalIn .3s ease;
+    }
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      border: 0;
+      background: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .modal-box h2 {
+      margin-bottom: 5px;
+    }
+
+    .modal-box .sub {
+      color: #6b7280;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .success-message {
+      display: none;
+      padding: 12px;
+      border-radius: 8px;
+      background: #e8f7ed;
+      color: var(--green);
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      display: none;
+      z-index: 900;
+      font-size: 18px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero-grid,
+      .why-grid,
+      .placement-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+
+      .program-grid,
+      .centre-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .topbar {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px;
+      }
+
+      .navbar .btn {
+        display: none;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mock-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .course-grid,
+      .program-grid,
+      .centre-grid,
+      .companies,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div>📞 Admissions Open | Career-focused IT Training</div>
+
+      <div class="topbar-right">
+        <span>Mon - Sat: 8 AM - 9 PM</span>
+        <span>📧 info@kiranacademy.example</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+
+        <div class="logo-icon">K</div>
+
+        <div class="logo-text">
+          <strong style="font-size:1.5pc;color: rgb(13, 13, 44);">The Kiran Academy</strong>
+          <span>LEARN • PRACTICE • GET PLACED</span>
+        </div>
+
+      </a>
+
+
+      <button class="mobile-menu" id="mobileMenu">
+        ☰
+      </button>
+
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#why">Why Us</a>
+        <a href="#placements">Placements</a>
+        <a href="#programs">Programs</a>
+        <a href="#centres">Centres</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+
+      <button class="btn btn-primary" onclick="openLogin()">
+        Login / Register
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          🚀 Build Skills. Build Career.
+        </div>
+
+        <h1>
+          Learn IT Skills That
+          <span>Build Your Future</span>
+        </h1>
+
+        <p>
+          Master Java, Python, Full Stack Development, Data Analytics,
+          Automation Testing and modern AI tools with practical,
+          career-focused training.
+        </p>
+
+        <div class="hero-buttons">
+
+          <button class="btn btn-primary" onclick="openLogin()">
+            Start Learning →
+          </button>
+
+          <a href="#courses" class="btn btn-outline">
+            Explore Courses
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <h3>🔥 Popular Career Courses</h3>
+
+        <div class="hero-course">
+          <strong>Java Full Stack</strong>
+          <span>POPULAR</span>
+        </div>
+
+        <div class="hero-course">
+          <strong>Python Full Stack</strong>
+          <span>POPULAR</span>
+        </div>
+
+        <div class="hero-course">
+          <strong>Data Analytics + Power BI</strong>
+          <span>NEW</span>
+        </div>
+
+        <div class="hero-course">
+          <strong>Automation Testing</strong>
+          <span>CAREER</span>
+        </div>
+
+        <div class="hero-course">
+          <strong>AI Tools & Machine Learning</strong>
+          <span>NEW</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STATS
+  ========================== -->
+
+  <section class="stats">
+
+    <div class="container stats-grid">
+
+      <div class="stat">
+        <h3 data-target="25">0+</h3>
+        <p>Years of Training Experience</p>
+      </div>
+
+      <div class="stat">
+        <h3 data-target="50000">0+</h3>
+        <p>Students Trained</p>
+      </div>
+
+      <div class="stat">
+        <h3 data-target="100">0+</h3>
+        <p>Corporate Skills</p>
+      </div>
+
+      <div class="stat">
+        <h3 data-target="15">0+</h3>
+        <p>Career Programs</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       COURSES
+  ========================== -->
+
+  <section class="section courses" id="courses">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span class="tag">Our Courses</span>
+
+        <h2>Industry-Ready IT Courses</h2>
+
+        <p>
+          Choose from programming, development, testing,
+          analytics and AI technologies.
+        </p>
+      </div>
+
+
+      <div class="course-grid">
+
+        <div class="course-card">
+          <div class="course-icon">J</div>
+          <h3>Java</h3>
+          <p>Core Java, OOP, Collections, Exception Handling and more.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">S</div>
+          <h3>Spring Boot</h3>
+          <p>Build production-ready Java backend applications.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">H</div>
+          <h3>Hibernate</h3>
+          <p>Learn ORM, database integration and persistence.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">R</div>
+          <h3>React</h3>
+          <p>Modern component-based frontend development.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">Py</div>
+          <h3>Python</h3>
+          <p>Programming fundamentals and real-world projects.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">D</div>
+          <h3>Django</h3>
+          <p>Create secure and scalable Python web applications.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">SQL</div>
+          <h3>SQL & MySQL</h3>
+          <p>Queries, joins, procedures, database design and more.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">GH</div>
+          <h3>Git & GitHub</h3>
+          <p>Version control, branches, collaboration and workflows.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">API</div>
+          <h3>REST APIs</h3>
+          <p>Design and consume RESTful web services.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">S</div>
+          <h3>Selenium</h3>
+          <p>Web automation testing using Selenium.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">BI</div>
+          <h3>Power BI</h3>
+          <p>Data visualization, dashboards and business analytics.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">ML</div>
+          <h3>Machine Learning</h3>
+          <p>ML fundamentals, models and practical projects.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">AI</div>
+          <h3>AI Tools</h3>
+          <p>Learn modern AI tools for productivity and development.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon">JS</div>
+          <h3>JavaScript</h3>
+          <p>Modern JavaScript for interactive web applications.</p>
+          <a href="#" class="course-link">View Course →</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHY US
+  ========================== -->
+
+  <section class="section" id="why">
+
+    <div class="container why-grid">
+
+      <div class="why-image">
+
+        <div class="why-image-box">
+
+          <h3>Learn From Practical Experience</h3>
+
+          <p>
+            Classroom learning + practical assignments +
+            mock interviews + placement preparation.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="section-title" style="text-align:left; margin-bottom:30px;">
+          <span class="tag">Why Choose Us</span>
+
+          <h2>Learn More Than Just Coding</h2>
+
+          <p>
+            Our learning approach focuses on technical skills,
+            practical implementation and career preparation.
+          </p>
+        </div>
+
+
+        <div class="why-list">
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <h4>Practical Training</h4>
+              <p>Hands-on assignments and real-world projects.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <h4>Interview Preparation</h4>
+              <p>Technical questions, mock interviews and aptitude.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <h4>Mock Tests</h4>
+              <p>Regular assessments to track your progress.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <h4>Career Guidance</h4>
+              <p>Resume, LinkedIn, GitHub and placement guidance.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROGRAMS
+  ========================== -->
+
+  <section class="section programs" id="programs">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="tag">Career Programs</span>
+
+        <h2>Choose Your Career Path</h2>
+
+        <p>
+          Structured programs designed for beginners,
+          graduates and working professionals.
+        </p>
+
+      </div>
+
+
+      <div class="program-grid">
+
+        <div class="program-card">
+
+          <h3>Java Full Stack</h3>
+
+          <p>
+            Build strong frontend and backend development skills.
+          </p>
+
+          <ul>
+            <li>Core Java</li>
+            <li>Advanced Java</li>
+            <li>Spring Boot</li>
+            <li>Hibernate</li>
+            <li>React</li>
+            <li>SQL & MySQL</li>
+            <li>REST APIs</li>
+            <li>Git & GitHub</li>
+          </ul>
+
+          <br>
+
+          <button class="btn btn-primary" onclick="openLogin()">
+            Enquire Now
+          </button>
+
+        </div>
+
+
+        <div class="program-card featured">
+
+          <span class="popular">POPULAR</span>
+
+          <h3>Python Full Stack</h3>
+
+          <p>
+            Learn Python development and modern web technologies.
+          </p>
+
+          <ul>
+            <li>Python</li>
+            <li>Django</li>
+            <li>REST APIs</li>
+            <li>React</li>
+            <li>SQL & MySQL</li>
+            <li>Git & GitHub</li>
+            <li>Projects</li>
+            <li>Interview Preparation</li>
+          </ul>
+
+          <br>
+
+          <button class="btn btn-primary" onclick="openLogin()">
+            Enquire Now
+          </button>
+
+        </div>
+
+
+        <div class="program-card">
+
+          <h3>Data & AI</h3>
+
+          <p>
+            Learn analytics, visualization and machine learning.
+          </p>
+
+          <ul>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Power BI</li>
+            <li>Machine Learning</li>
+            <li>AI Tools</li>
+            <li>Data Visualization</li>
+            <li>Projects</li>
+            <li>Interview Preparation</li>
+          </ul>
+
+          <br>
+
+          <button class="btn btn-primary" onclick="openLogin()">
+            Enquire Now
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PLACEMENTS
+  ========================== -->
+
+  <section class="section" id="placements">
+
+    <div class="container placement-grid">
+
+      <div class="placement-box">
+
+        <h2>Placement Preparation</h2>
+
+        <p>
+          Get career-ready with technical preparation,
+          mock interviews, resume guidance and aptitude practice.
+        </p>
+
+        <div class="placement-points">
+
+          <div>✓ Resume Building</div>
+          <div>✓ Technical Interview Preparation</div>
+          <div>✓ Aptitude & Reasoning</div>
+          <div>✓ Mock Interviews</div>
+          <div>✓ HR Interview Preparation</div>
+          <div>✓ GitHub & Project Guidance</div>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="section-title" style="text-align:left; margin-bottom:25px;">
+
+          <span class="tag">Career Ecosystem</span>
+
+          <h2>Build Skills Employers Look For</h2>
+
+          <p>
+            Develop practical technical skills and professional
+            confidence through structured learning.
+          </p>
+
+        </div>
+
+
+        <div class="companies">
+
+          <div class="company">TCS</div>
+          <div class="company">Infosys</div>
+          <div class="company">Wipro</div>
+          <div class="company">Accenture</div>
+          <div class="company">Cognizant</div>
+          <div class="company">Capgemini</div>
+          <div class="company">Tech Mahindra</div>
+          <div class="company">Persistent</div>
+          <div class="company">IT Companies</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MOCK TEST
+  ========================== -->
+
+  <section class="section mock-section" id="mock-test">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="tag">Practice Zone</span>
+
+        <h2>Mock Tests & Assessments</h2>
+
+        <p>
+          Test your knowledge and prepare for technical interviews
+          with regular mock assessments.
+        </p>
+
+      </div>
+
+
+      <div class="mock-grid">
+
+        <div class="mock-card">
+
+          <h3>🎯 Today's Mock Test</h3>
+
+          <p>
+            Java Full Stack Assessment
+          </p>
+
+          <div class="timer" id="timer">
+            29:59
+          </div>
+
+          <button class="btn btn-primary" onclick="startMockTest()">
+            Start Mock Test
+          </button>
+
+        </div>
+
+
+        <div class="mock-card">
+
+          <h3>📚 Practice Categories</h3>
+
+          <p>Choose a subject for practice.</p>
+
+          <br>
+
+          <select id="mockCategory">
+
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="sql">SQL</option>
+            <option value="javascript">JavaScript</option>
+            <option value="react">React</option>
+            <option value="selenium">Selenium</option>
+            <option value="powerbi">Power BI</option>
+            <option value="ml">Machine Learning</option>
+
+          </select>
+
+          <br><br>
+
+          <button class="btn btn-primary" onclick="showCategory()">
+            Practice Now
+          </button>
+
+          <p id="categoryMessage" style="margin-top:15px;"></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SCHEDULE
+  ========================== -->
+
+  <section class="section" id="schedule">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="tag">Mock Schedule</span>
+
+        <h2>Upcoming Mock Tests</h2>
+
+        <p>
+          Plan your preparation with our mock test schedule.
+        </p>
+
+      </div>
+
+
+      <div class="schedule-table-wrapper">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Course</th>
+              <th>Topic</th>
+              <th>Time</th>
+              <th>Duration</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>05 Oct</td>
+              <td>Java</td>
+              <td>OOP & Collections</td>
+              <td>10:00 AM</td>
+              <td>60 Min</td>
+              <td><span class="status">Open</span></td>
+            </tr>
+
+            <tr>
+              <td>07 Oct</td>
+              <td>SQL</td>
+              <td>Queries & Joins</td>
+              <td>11:00 AM</td>
+              <td>45 Min</td>
+              <td><span class="status">Open</span></td>
+            </tr>
+
+            <tr>
+              <td>09 Oct</td>
+              <td>Python</td>
+              <td>Python Programming</td>
+              <td>10:00 AM</td>
+              <td>60 Min</td>
+              <td><span class="status">Open</span></td>
+            </tr>
+
+            <tr>
+              <td>12 Oct</td>
+              <td>React</td>
+              <td>Components & Hooks</td>
+              <td>12:00 PM</td>
+              <td>45 Min</td>
+              <td><span class="status">Open</span></td>
+            </tr>
+
+            <tr>
+              <td>15 Oct</td>
+              <td>Selenium</td>
+              <td>Automation Testing</td>
+              <td>11:00 AM</td>
+              <td>60 Min</td>
+              <td><span class="status">Open</span></td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CENTRES
+  ========================== -->
+
+  <section class="section centres" id="centres">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="tag">Our Centres</span>
+
+        <h2>Learn With Us</h2>
+
+        <p>
+          Explore training locations and choose a centre
+          convenient for you.
+        </p>
+
+      </div>
+
+
+      <div class="centre-grid">
+
+        <div class="centre-card">
+
+          <div class="centre-image pune"></div>
+
+          <div class="centre-info">
+
+            <h3>Pune</h3>
+
+            <p>
+              IT training and career-focused programs in Pune.
+            </p>
+
+            <br>
+
+            <button class="btn btn-outline" onclick="openLogin()">
+              Enquire
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="centre-card">
+
+          <div class="centre-image nagpur"></div>
+
+          <div class="centre-info">
+
+            <h3>Nagpur</h3>
+
+            <p>
+              Practical training and placement preparation.
+            </p>
+
+            <br>
+
+            <button class="btn btn-outline" onclick="openLogin()">
+              Enquire
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="centre-card">
+
+          <div class="centre-image mumbai"></div>
+
+          <div class="centre-info">
+
+            <h3>Mumbai</h3>
+
+            <p>
+              Career-oriented IT courses and professional training.
+            </p>
+
+            <br>
+
+            <button class="btn btn-outline" onclick="openLogin()">
+              Enquire
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="section" id="contact">
+
+    <div class="container contact-grid">
+
+      <div class="contact-card">
+
+        <h3>Let's Start Your Career Journey</h3>
+
+        <p>
+          Have questions about courses, batches,
+          fees or career programs? Contact us.
+        </p>
+
+
+        <div class="contact-item">
+          <span>📍</span>
+          <div>
+            <strong>Centre</strong><br>
+            Pune, Maharashtra
+          </div>
+        </div>
+
+
+        <div class="contact-item">
+          <span>📞</span>
+          <div>
+            <strong>Phone</strong><br>
+            +91 XXXXX XXXXX
+          </div>
+        </div>
+
+
+        <div class="contact-item">
+          <span>✉️</span>
+          <div>
+            <strong>Email</strong><br>
+            info@kiranacademy.example
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="contact-form">
+
+        <h3>Send an Enquiry</h3>
+
+        <br>
+
+        <form id="contactForm">
+
+          <div class="form-group">
+
+            <label>Full Name</label>
+
+            <input
+              type="text"
+              id="contactName"
+              placeholder="Enter your name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Mobile Number</label>
+
+            <input
+              type="tel"
+              id="contactMobile"
+              placeholder="Enter mobile number"
+              pattern="[0-9]{10}"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Interested Course</label>
+
+            <select id="contactCourse" required>
+
+              <option value="">Select Course</option>
+
+              <option>Java</option>
+              <option>Spring Boot</option>
+              <option>Hibernate</option>
+              <option>React</option>
+              <option>Python</option>
+              <option>Django</option>
+              <option>SQL / MySQL</option>
+              <option>Git / GitHub</option>
+              <option>REST APIs</option>
+              <option>Selenium</option>
+              <option>Power BI</option>
+              <option>Machine Learning</option>
+              <option>AI Tools</option>
+              <option>JavaScript</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Message</label>
+
+            <textarea
+              placeholder="Tell us what you want to learn..."
+            ></textarea>
+
+          </div>
+
+
+          <button class="btn btn-primary" type="submit">
+            Submit Enquiry
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h3>The Kiran Academy</h3>
+
+          <p>
+            Career-focused IT training designed to help
+            learners develop practical technology skills.
+          </p>
+
+          <br>
+
+          <p>
+            Learn • Practice • Build • Grow
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Courses</h4>
+
+          <ul>
+            <li><a href="#courses">Java</a></li>
+            <li><a href="#courses">Python</a></li>
+            <li><a href="#courses">React</a></li>
+            <li><a href="#courses">SQL</a></li>
+            <li><a href="#courses">Selenium</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Programs</h4>
+
+          <ul>
+            <li><a href="#programs">Java Full Stack</a></li>
+            <li><a href="#programs">Python Full Stack</a></li>
+            <li><a href="#programs">Data & AI</a></li>
+            <li><a href="#placements">Placements</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <ul>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#schedule">Mock Schedule</a></li>
+            <li><a href="#centres">Centres</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 The Kiran Academy. All Rights Reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       LOGIN MODAL
+  ========================== -->
+
+  <div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+      <button class="close-modal" onclick="closeLogin()">
+        ×
+      </button>
+
+
+      <h2>Join The Kiran Academy</h2>
+
+      <p class="sub">
+        Enter your details and our team can contact you about your selected course.
+      </p>
+
+
+      <div class="success-message" id="loginSuccess">
+        Registration submitted successfully!
+      </div>
+
+
+      <form id="loginForm">
+
+        <div class="form-group">
+
+          <label>Your Name</label>
+
+          <input
+            type="text"
+            id="studentName"
+            placeholder="Enter full name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Mobile Number</label>
+
+          <input
+            type="tel"
+            id="studentMobile"
+            placeholder="10 digit mobile number"
+            pattern="[0-9]{10}"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Select Course</label>
+
+          <select id="studentCourse" required>
+
+            <option value="">Choose Course</option>
+
+            <option>Java</option>
+            <option>Spring Boot</option>
+            <option>Hibernate</option>
+            <option>React</option>
+            <option>Python</option>
+            <option>Django</option>
+            <option>SQL / MySQL</option>
+            <option>Git / GitHub</option>
+            <option>REST APIs</option>
+            <option>Selenium</option>
+            <option>Power BI</option>
+            <option>Machine Learning</option>
+            <option>AI Tools</option>
+            <option>JavaScript</option>
+
+          </select>
+
+        </div>
+
+
+        <button class="btn btn-primary" type="submit" style="width:100%;">
+          Submit & Continue
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- BACK TO TOP -->
+
+  <button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    ↑
+  </button>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navLinks = document.getElementById("navLinks");
+
+    mobileMenu.addEventListener("click", () => {
+
+      navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+      });
+
+    });
+
+
+    /* =========================
+       LOGIN MODAL
+    ========================== */
+
+    const loginModal = document.getElementById("loginModal");
+
+    function openLogin() {
+
+      loginModal.classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeLogin() {
+
+      loginModal.classList.remove("active");
+
+      document.body.style.overflow = "auto";
+
+    }
+
+
+    loginModal.addEventListener("click", function(e) {
+
+      if (e.target === loginModal) {
+
+        closeLogin();
+
+      }
+
+    });
+
+
+    /* =========================
+       LOGIN FORM
+    ========================== */
+
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      const name =
+        document.getElementById("studentName").value;
+
+      const mobile =
+        document.getElementById("studentMobile").value;
+
+      const course =
+        document.getElementById("studentCourse").value;
+
+      if (!name || !mobile || !course) {
+
+        alert("Please fill all details.");
+
+        return;
+
+      }
+
+      document.getElementById("loginSuccess").style.display = "block";
+
+      loginForm.reset();
+
+      setTimeout(() => {
+
+        closeLogin();
+
+        document.getElementById("loginSuccess").style.display = "none";
+
+      }, 2000);
+
+    });
+
+
+    /* =========================
+       CONTACT FORM
+    ========================== */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      alert(
+        "Thank you! Your enquiry has been submitted."
+      );
+
+      contactForm.reset();
+
+    });
+
+
+    /* =========================
+       MOCK TEST TIMER
+    ========================== */
+
+    let timerSeconds = 30 * 60;
+
+    let timerStarted = false;
+
+    function startTimer() {
+
+      if (timerStarted) return;
+
+      timerStarted = true;
+
+      const timer =
+        document.getElementById("timer");
+
+      const interval = setInterval(() => {
+
+        const minutes =
+          Math.floor(timerSeconds / 60);
+
+        const seconds =
+          timerSeconds % 60;
+
+        timer.textContent =
+          String(minutes).padStart(2, "0")
+          + ":" +
+          String(seconds).padStart(2, "0");
+
+        timerSeconds--;
+
+        if (timerSeconds < 0) {
+
+          clearInterval(interval);
+
+          timer.textContent = "00:00";
+
+          alert("Mock test time completed.");
+
+        }
+
+      }, 1000);
+
+    }
+
+
+    function startMockTest() {
+
+      startTimer();
+
+      alert(
+        "Mock test started! This demo can be connected to a real quiz system."
+      );
+
+    }
+
+
+    /* =========================
+       MOCK CATEGORY
+    ========================== */
+
+    function showCategory() {
+
+      const category =
+        document.getElementById("mockCategory").value;
+
+      const message =
+        document.getElementById("categoryMessage");
+
+      const formatted =
+        category.charAt(0).toUpperCase()
+        + category.slice(1);
+
+      message.textContent =
+        "Practice test selected: " + formatted;
+
+    }
+
+
+    /* =========================
+       COUNTER ANIMATION
+    ========================== */
+
+    const counters =
+      document.querySelectorAll("[data-target]");
+
+    let countersStarted = false;
+
+    function animateCounters() {
+
+      if (countersStarted) return;
+
+      const statsSection =
+        document.querySelector(".stats");
+
+      const rect =
+        statsSection.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight) {
+
+        countersStarted = true;
+
+        counters.forEach(counter => {
+
+          const target =
+            Number(counter.dataset.target);
+
+          let current = 0;
+
+          const increment =
+            Math.max(1, Math.floor(target / 80));
+
+          const update = () => {
+
+            current += increment;
+
+            if (current >= target) {
+
+              counter.textContent =
+                target.toLocaleString() + "+";
+
+            } else {
+
+              counter.textContent =
+                current.toLocaleString() + "+";
+
+              requestAnimationFrame(update);
+
+            }
+
+          };
+
+          update();
+
+        });
+
+      }
+
+    }
+
+
+    window.addEventListener("scroll", animateCounters);
+
+    animateCounters();
+
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+
+        topBtn.style.display = "block";
+
+      } else {
+
+        topBtn.style.display = "none";
+
+      }
+
+    });
+
+
+    /* =========================
+       ESCAPE MODAL
+    ========================== */
+
+    document.addEventListener("keydown", function(e) {
+
+      if (e.key === "Escape") {
+
+        closeLogin();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
